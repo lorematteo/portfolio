@@ -5,14 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <title>👨🏼‍💻</title>
 </head>
 <body>
+    <nav class="navigationMenu">
+        <ul class="ulMenu">
+            <a href="#pone"><li class="liItem">About</li></a>
+            <a href="#ptwo"><li class="liItem">Aftal</li></a>
+            <a href="#pthree"><li class="liItem">Pratico</li></a>
+            <a href="#pfour"><li class="liItem">PrépaStar</li></a>
+            <a href="#pfive"><li class="liItem">Contact</li></a>
+        </ul>
+    </nav>
+
     <div class="panelsContainer">
-        <div class="panel" id="pone">Page 1</div>
+        <div class="panel" id="pone">
+            <h1 aria-label="Hi! I'm a developer">
+                Hello,<br/>I am&nbsp;<span class="typewriter"></span>
+            </h1>
+            <video width="320" height="240" muted autoplay loop>
+                <source src="assets/animoji.mov" type="video/mp4">
+            </video>
+        </div>
         <div class="panel" id="ptwo">Page 2</div>
         <div class="panel" id="pthree">Page 3</div>
         <div class="panel" id="pfour">Page 4</div>
+        <div class="panel" id="pfive">Page 5</div>
     </div>
 </body>
 </html>

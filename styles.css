@@ -45,3 +45,106 @@ body {
 .panel:nth-child(5) {
   background: #456789;
 }
+
+/************************************/
+/****      TYPEWRITER EFFECT    *****/
+/************************************/
+
+h1 {
+  font-size: 9vmin;
+  text-align: left;
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin: 1rem 0 1rem 2rem;
+}
+
+/* Typewriter effect 1 */
+@keyframes typing {
+  0.0000%, 18.9268% {content: "";}
+  0.7439%, 18.1829% {content: "M";}
+  1.4878%, 17.4390% {content: "Ma";}
+  2.2317%, 16.6951% {content: "Mat";}
+  2.9756%, 15.9512% {content: "Matt";}
+  3.7195%, 15.2073% {content: "Matté";}
+  4.4634%, 14.4634% {content: "Mattéo";}
+
+  21.9268%, 61.6828% {content: "";}
+  22.6707%, 60.9389% {content: "a";}
+  23.4146%, 60.1950% {content: "an ";}
+  24.1585%, 59.4511% {content: "an e";}
+  24.9024%, 58.7072% {content: "an en";}
+  25.6463%, 57.9633% {content: "an engi";}
+  26.3902%, 57.2194% {content: "an engin";}
+  27.1341%, 56.4755% {content: "an engine";}
+  27.8780%, 55.7316% {content: "an enginee";}
+  28.6219%, 54.9877% {content: "an engineer";}
+  29.3658%, 54.2438% {content: "an engineeri";}
+  30.1097%, 53.5000% {content: "an engineerin";}
+  30.8536%, 52.7561% {content: "an engineering";}
+  31.5975%, 52.0122% {content: "an engineering ";}
+  32.3414%, 51.2683% {content: "an engineering s";}
+  33.0853%, 50.5244% {content: "an engineering st";}
+  33.8292%, 49.7805% {content: "an engineering stu";}
+  34.5731%, 49.0366% {content: "an engineering stud";}
+  35.3170%, 48.2927% {content: "an engineering stude";}
+  36.0609%, 47.5488% {content: "an engineering studen";}
+  36.8048%, 46.8048% {content: "an engineering student";}
+
+  64.6828%, 91.7925% {content: "";}
+  65.4267%, 91.0486% {content: "a";}
+  66.1706%, 90.3047% {content: "a ";}
+  66.9145%, 89.5608% {content: "a d";}
+  67.6584%, 88.8170% {content: "a de";}
+  68.4023%, 88.0731% {content: "a dev";}
+  69.1462%, 87.3292% {content: "a deve";}
+  69.8901%, 86.5853% {content: "a devel";}
+  70.6340%, 85.8414% {content: "a develo";}
+  71.3779%, 85.0975% {content: "a develop";}
+  72.1218%, 84.3536% {content: "a develope";}
+  72.8657%, 82.8657% {content: "a developer";}
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1;}
+  50% { opacity: 0;}
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%, 100% { content: "Mattéo";}
+    20% { content: "an engineering student";}
+    65% { content: "a developer";}
+  }
+
+  .typewriter::before {
+    content: "Mattéo";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
